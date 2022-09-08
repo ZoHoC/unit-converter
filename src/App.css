@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Properties */
+
+:root {
+  --ff-primary: "cursive", sans-serif;
+
+  --fw-light: 300;
+  --fw-reg: 400;
+  --fw-bold: 700;
+
+  --clr-light: #fff;
+  --clr-dark: #1f2225;
+
+  --fs-h1: 1.7rem;
+  --fs-body: 1rem;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 2.5rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+/* General styles */
+
+body {
+  color: var(--clr-light);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+.App {
+  height: 100vh;
+  background-color: var(--clr-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography */
+
+h1 {
+  padding-top: 2em;
+  font-size: var(--fs-h1);
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  padding: 1.1em 0;
+}
+
+input {
+  border: none;
+  border-radius: 1em;
+  font-size: var(--fs-body);
+  margin-left: 0.5em;
+  width: 5em;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--clr-light);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.container--top {
+  height: 30vh;
+  background-image: linear-gradient(
+    45deg,
+    hsl(279deg 87% 27%) 0%,
+    hsl(283deg 41% 39%) 62%,
+    hsl(291deg 30% 45%) 82%,
+    hsl(299deg 24% 51%) 91%,
+    hsl(308deg 29% 57%) 96%,
+    hsl(314deg 34% 63%) 99%,
+    hsl(319deg 42% 68%) 100%,
+    hsl(323deg 51% 73%) 100%,
+    hsl(327deg 64% 78%) 100%,
+    hsl(330deg 83% 82%) 100%
+  );
+}
+
+.container--bot {
+  background-color: #1f2225;
+}
+
+.container--top,
+.container--bot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
